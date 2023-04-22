@@ -1,0 +1,35 @@
+# 项目名称
+app_name: project
+
+#默认数据库配置
+connection: default
+db_database: base_server
+db_host: 192.168.2.100
+db_port: 3306
+db_username: base_server
+db_password: PthDcbhfJr3E7zBA
+charset: utf8
+prefix: tmx_
+max_connection: 20
+max_open_connection: 5
+
+#默认redis配置
+redis_connection: default
+redis_host: 192.168.2.100
+redis_auth: 123123
+redis_port: 6379
+redis_db: 4
+redis_max_connection: 20
+redis_min_open_connection: 5
+
+#是否开启task open|stop
+task_enable_status: stop
+#是否开启process open|stop
+process_enable_status: stop
+
+#http监听地址
+listen_address: 0.0.0.0
+#http监听端口
+listen_port: 9501
+#goMaxProcs
+go_max_process: 4
