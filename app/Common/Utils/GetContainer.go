@@ -38,3 +38,10 @@ func ContainerGetRedis() *tmxServer.RedisPool {
 func ContainerGetConfig() *tmxServer.Config {
 	return (*tmxServer.Config)(unsafe.Pointer(global.GetGlobalContainer().Get(new(tmxServer.Config).Key())))
 }
+
+// ContainerGetServer
+// @Description: 获取server
+// @return *tmxServer.Config
+func ContainerGetServer() *tmxServer.Server {
+	return (*tmxServer.Server)(unsafe.Pointer(global.GetGlobalContainer().Get(new(tmxServer.Server).Key())))
+}

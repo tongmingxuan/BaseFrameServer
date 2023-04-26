@@ -93,7 +93,7 @@ func (m RequestIdMiddleware) MiddlewareFunc() gin.HandlerFunc {
 		context.Next()
 
 		Utils.LoggerInfo("RequestIdMiddleware", "返回响应", map[string]interface{}{
-			"message":      "接收到请求",
+			"message":      "返回响应",
 			"get_params":   getParams,
 			"post_params":  postParams,
 			"request_id":   requestId,
