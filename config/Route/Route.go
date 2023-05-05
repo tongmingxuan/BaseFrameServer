@@ -20,4 +20,6 @@ func DefaultHttpRoute(g *gin.Engine) {
 	})
 
 	g.GET("/auth", Controller.AuthController{}.Index)
+
+	AdminRouteInit(g)
 }
