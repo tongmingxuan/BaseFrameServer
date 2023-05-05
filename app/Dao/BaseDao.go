@@ -3,7 +3,6 @@ package Dao
 
 import (
 	"BaseFrameServer/app/Model"
-	"fmt"
 	"github.com/tongmingxuan/tmx-server/plugin/pluginList/DaoPlugin"
 	"gorm.io/gorm"
 )
@@ -42,9 +41,6 @@ func (dao BaseDao) FindInfoByWhere(where []interface{}) (result Model.InterfaceM
 	if db.RowsAffected == 0 {
 		return nil
 	}
-
-	fmt.Println(db.RowsAffected)
-	fmt.Println(table)
 
 	return table
 }
