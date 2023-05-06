@@ -9,6 +9,7 @@ import (
 )
 
 const Father string = `
+	                   嗨害嗨,来啦
 	                    _ooOoo_
 	                   o8888888o
 	                   88" . "88
@@ -42,7 +43,7 @@ func main() {
 
 	bin.ServerStart()
 
-	fmt.Println(Father)
+	fmt.Println(Father, "")
 
 	Utils.LoggerInfo("服务启动成功", "", nil)
 
