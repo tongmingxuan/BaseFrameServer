@@ -46,23 +46,23 @@ func (m RequestIdMiddleware) MiddlewareFunc() gin.HandlerFunc {
 					context.String(200, HelperFunction.JsonError("string.error", map[string]interface{}{
 						"error":     r,
 						"RunHandle": handlerErr,
-					}))
+					}, 500))
 				case runtime.Error: // 运行时错误:
 					context.String(200, HelperFunction.JsonError("runtime.error", map[string]interface{}{
 						"error":     r,
 						"RunHandle": handlerErr,
-					}))
+					}, 500))
 				case Exception.BaseException:
 					message := reflect.ValueOf(r).FieldByName("Message").String()
 					context.String(200, HelperFunction.JsonError("customize.error:"+message, map[string]interface{}{
 						"error":     r,
 						"RunHandle": handlerErr,
-					}))
+					}, 500))
 				default:
 					context.String(200, HelperFunction.JsonError("运行异常", map[string]interface{}{
 						"error":     r,
 						"RunHandle": handlerErr,
-					}))
+					}, 500))
 				}
 			}
 		}()

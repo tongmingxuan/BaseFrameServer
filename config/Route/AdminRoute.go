@@ -12,4 +12,6 @@ func AdminRouteInit(g *gin.Engine) {
 
 	admin := g.Group("/admin")
 	admin.POST("/login", adminController.Login)
+
+	admin.GET("/getUserInfo", adminController.GetUserInfo)
 }

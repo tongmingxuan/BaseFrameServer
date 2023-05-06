@@ -2,7 +2,7 @@
 package Controller
 
 import (
-	"BaseFrameServer/app/Service"
+	"BaseFrameServer/app/Service/AdminService"
 	"github.com/gin-gonic/gin"
 )
 
@@ -19,12 +19,33 @@ func (controller AdminController) Login(c *gin.Context) {
 
 	defer func() {
 		if r := recover(); r != nil {
-			c.String(200, controller.JsonError("异常", nil))
+			c.String(200, controller.JsonError("异常", nil, 500))
 			return
 		}
 	}()
 
-	Service.AdminService{}.Login(param["admin_name"].(string), param["admin_password"].(string))
+	result := AdminService.AdminService{}.Login(param["admin_name"].(string), param["admin_password"].(string))
 
-	c.String(200, controller.JsonSuccess("Login:嗨害嗨", nil))
+	if result.Code == 200 {
+		c.String(200, controller.JsonSuccess(result.Message, map[string]interface{}{
+			"token": result.Data,
+		}))
+	} else {
+		c.String(200, controller.JsonError(result.Message, nil, result.Code))
+	}
+}
+
+func (controller AdminController) GetUserInfo(c *gin.Context) {
+	service := AdminService.AdminService{}
+
+	result := service.TokenGetAdmin(c)
+
+	if result.Code != 200 {
+		c.String(200, controller.JsonError(result.Message, nil, result.Code))
+		return
+	}
+
+	c.String(200, controller.JsonSuccess(result.Message, map[string]interface{}{
+		"result": result.Data,
+	}))
 }

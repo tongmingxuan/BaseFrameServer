@@ -77,6 +77,6 @@ func (receiver BaseController) JsonSuccess(message string, data map[string]inter
 // @param message
 // @param data
 // @return string
-func (receiver BaseController) JsonError(message string, data map[string]interface{}) string {
-	return HelperFunction.JsonError(message, data)
+func (receiver BaseController) JsonError(message string, data map[string]interface{}, code int) string {
+	return HelperFunction.JsonError(message, data, code)
 }
