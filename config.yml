@@ -9,7 +9,6 @@ db_port: 3306
 db_username: base_server
 db_password: PthDcbhfJr3E7zBA
 charset: utf8
-prefix: tmx_
 max_connection: 20
 max_open_connection: 5
 
