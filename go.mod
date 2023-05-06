@@ -6,7 +6,7 @@ require (
 	github.com/gin-gonic/gin v1.9.0
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/syyongx/php2go v0.9.8
-	github.com/tongmingxuan/tmx-server v1.0.8
+	github.com/tongmingxuan/tmx-server v1.1.0
 	gorm.io/gorm v1.24.5
 )
 
