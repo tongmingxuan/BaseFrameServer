@@ -5,7 +5,6 @@ import (
 	"BaseFrameServer/app/Common/Utils"
 	"BaseFrameServer/bin"
 	"fmt"
-	"time"
 )
 
 const Father string = `
@@ -47,5 +46,5 @@ func main() {
 
 	Utils.LoggerInfo("服务启动成功", "", nil)
 
-	time.Sleep(1000 * time.Second)
+	select {}
 }
