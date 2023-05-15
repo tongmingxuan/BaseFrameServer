@@ -2,11 +2,13 @@
 package Model
 
 import (
+	"BaseFrameServer/app/Constant"
+	"github.com/tongmingxuan/tmx-server/tmxServer"
 	"gorm.io/gorm"
 )
 
 type AdminModel struct {
-	BaseModel
+	tmxServer.BaseModel
 	Id            int    `gorm:"primaryKey" json:"id"`
 	AdminName     string `json:"admin_name"`
 	AdminPassword string `json:"admin_password"`
@@ -16,10 +18,10 @@ func (m AdminModel) TableName() string {
 	return "admin"
 }
 
-func (m AdminModel) GetConnection() string {
-	return GetDefaultConnectionName()
+func (m AdminModel) GetPollName() string {
+	return Constant.DefaultDatabaseConnection
 }
 
-func (m AdminModel) GetDb() *gorm.DB {
+func (m AdminModel) GetConnection() *gorm.DB {
 	return m.Model(m)
 }

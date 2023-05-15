@@ -10,6 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/syyongx/php2go"
 	"github.com/tongmingxuan/tmx-server/plugin/pluginList/HelperFunction"
+	"github.com/tongmingxuan/tmx-server/tmxServer"
 	"gorm.io/gorm"
 	"time"
 )
@@ -19,7 +20,12 @@ type AdminService struct {
 }
 
 func (service AdminService) Login(adminName, adminPassword string) Service.Result {
-	adminInfo, err := Dao.AdminDao{}.Login(adminName, adminPassword)
+
+	dao := tmxServer.CommonGetDao("")
+
+	adminDao := Dao.GetAdminDao(dao)
+
+	adminInfo, err := adminDao.Login(adminName, adminPassword)
 
 	if err != nil {
 		return service.ServiceError("账号或密码错误|数据不存在", adminInfo, 500)
