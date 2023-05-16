@@ -237,8 +237,8 @@ github.com/subosito/gotenv v1.4.1 h1:jyEFiXpy21Wm81FBN71l9VoMMV8H8jG+qIK3GCpY6Qs
 github.com/subosito/gotenv v1.4.1/go.mod h1:ayKnFf/c6rvx/2iiLrJUk1e6plDbT3edrFNGqEflhK0=
 github.com/syyongx/php2go v0.9.8 h1:FNwV1y+RaZxl7KTm/ICh0Zrhca/70d5JRMpwByuQ1FM=
 github.com/syyongx/php2go v0.9.8/go.mod h1:meN2eIhhUoxOd2nMxbpe8g6cFPXI5O9/UAAuz7oDdzw=
-github.com/tongmingxuan/tmx-server v1.1.5 h1:RurMwUJXACJ+L8PlFFkFI2PGc3oK5UomEnbhwEjEP2A=
-github.com/tongmingxuan/tmx-server v1.1.5/go.mod h1:4m9MV0HSKJBOUN/w6Jw/w7c+nNumnvEwi3GxqGrAj1U=
+github.com/tongmingxuan/tmx-server v1.1.7 h1:ndFUU+7CggV95DMOtNFaqJIJj3yr0UmkpmHEIIFlyc0=
+github.com/tongmingxuan/tmx-server v1.1.7/go.mod h1:4m9MV0HSKJBOUN/w6Jw/w7c+nNumnvEwi3GxqGrAj1U=
 github.com/twitchyliquid64/golang-asm v0.15.1 h1:SU5vSMR7hnwNxj24w34ZyCi/FmDZTkS4MhqMhdFk5YI=
 github.com/twitchyliquid64/golang-asm v0.15.1/go.mod h1:a1lVb/DtPvCB8fslRZhAngC2+aY1QWCk3Cedj/Gdt08=
 github.com/ugorji/go/codec v1.2.9 h1:rmenucSohSTiyL09Y+l2OCk+FrMxGMzho2+tjr5ticU=
